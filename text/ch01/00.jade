@@ -1,7 +1,59 @@
 +article("Chapter 1")
   +section("Intro")
-    h1 Chapter 1
-
-    p Looks like everything is working! You can edit this file in text/ch01/00.jade.
-
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    h1.title This is a lesson title
+    h3.title This is a sublesson title
+    .yellowbox
+      p This is a yellow box
+    .bluebox
+      p This is a blue box
+    mixin bluetitle(options)
+      .bluetitle
+        if (options.img)
+          img(src=options.img)
+          //- div
+          span
+            h4= options.title
+            if(options.subtitle)
+              h6= options.subtitle
+        else
+          h4= options.title
+          if(options.subtitle)
+            h6= options.subtitle
+    +bluetitle({
+      img: "img/kitten.jpg",
+      title: "This is a blue title",
+      subtitle: "This is a subtitle"
+      })
+    mixin info()
+      if block
+        .yellowbox.info
+          img(src="img/kitten.jpg")
+          block
+    +bluetitle({
+      img: "img/kitten.jpg",
+      title: "This is just a cat and a blue title"
+      })
+    +bluetitle({
+      title: "This is just a blue title"
+      })
+    table
+      thead
+        tr
+          th this is an
+          th awful looking
+          th table
+      tbody
+        tr
+          th blah 
+          td 1
+          td 1
+        tr
+          th blah 
+          td 2
+          td 2
+        tr
+          th blah 
+          td 3
+          td 3
+    +info()
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
