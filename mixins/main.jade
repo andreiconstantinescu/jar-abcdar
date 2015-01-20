@@ -1,3 +1,29 @@
+//- mixin header(number, title, subtitle) 
+//-   .header
+//-     .row-fluid
+//-       .col-sm-9
+//-         .line
+//-           .lectie Lecția #{number}
+//-         h2
+//-       .col-sm-3.hidden-xs.image
+//-         img(src='http://lorempixel.com/300/200/')
+//-     h2
+//-       strong #{title}
+//-     h3
+//-       strong #{subtitle}
+mixin header(number, title, subtitle) 
+  .header
+    .line
+      .lectie Lecția #{number}
+    .row
+      .col-lg-7.col-sm-8
+        h1.titlu
+          strong #{title}
+        h3
+          strong #{subtitle}
+      .col-lg-5.col-sm-4.hidden-xs
+        .image
+          img(src='http://lorempixel.com/300/200/')
 mixin info()
   if block
     .yellowbox.info
