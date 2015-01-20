@@ -23,23 +23,27 @@ body
   //     margin: 0
   //     font-size: 1em
   .header
-    margin-top: 2em
+    margin-top: 1em
     width: 100%
     .line
       background-color: yellow
       height: auto
       width: 100%
     .image
-      margin-top: 1em
+      // margin-top: 1em
       padding: 0
       border: 6px solid yellow
       border-radius: 5px
     h1
       margin: 0
-      // @media(max-width:991px),(min-width:768px)
-      //   font-size: 1em
+      line-height: 1.2em
+      @media(max-width:1200px) and (min-width:768px)
+        font-size: 1.5em
+      @media(max-width:480px)
+        font-size: 1.5em
     h3
-      margin: 0
+      margin-top: 0.7em
+      line-height: 1.1em
     .lectie
       padding: .5em
       margin: 0
@@ -166,7 +170,7 @@ body
           padding .5em
 .elementlist
   .row
-    border-top: 3px solid #ddd
-    margin-top: 1em
+    // border-top: 3px solid #ddd
+    margin: 1em 0
     h1
       margin-bottom: 1em
