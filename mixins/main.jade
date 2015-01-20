@@ -1,0 +1,47 @@
+mixin header(number, title, subtitle) 
+  .header
+    .line
+      .lectie Lecția #{number}
+    .row
+      .col-lg-7.col-sm-8
+        h1.titlu
+          strong #{title}
+        h3
+          strong #{subtitle}
+      .col-lg-5.col-sm-4.hidden-xs
+        .image
+          img(src='http://lorempixel.com/300/200/')
+    //- hr
+mixin info()
+  if block
+    .yellowbox.info
+      img(src="img/kitten.jpg")
+      block
+mixin bluetitle(options)
+  .blue-title
+    if (options.img)
+      img(src="img/"+options.img)
+      //- div
+      span
+        h4= options.title
+        if(options.subtitle)
+          h6= options.subtitle
+    else
+      h4= options.title
+      if(options.subtitle)
+        h6= options.subtitle
+
+mixin exnumber(number,requirement)
+  .ex-number
+    .row
+      .col-xs-2 
+        .ex-icon= number
+      .col-xs-10
+        if (requirement)
+          .ex-requirement= requirement
+          .ex-content
+            block
+        else
+          
+          .ex-content
+            block

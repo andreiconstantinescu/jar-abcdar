@@ -1,7 +1,183 @@
 +article("Chapter 1")
-  +section("Intro")
-    h1 Chapter 1
-
-    p Looks like everything is working! You can edit this file in text/ch01/00.jade.
-
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  +section("Intro")  
+    +header("1", "Ghid de tranzacţionare: Carduri şi modalităţi moderne de plată", "Planifică-ţi resursele financiare!")
+      
+    .elementlist
+      hr
+      .row
+        .col-sm-6
+          h1 Element: header
+          +img("img/borderedimg2.png")
+        .col-sm-6
+          h1 CSS/mixin
+      hr
+      .row
+        .col-sm-6
+          h1 Element: footer
+          +img("img/footer1.png")
+          +img("img/footer2.png")
+        .col-sm-6
+          h1 CSS/mixin
+      hr
+      .row
+        .col-sm-6
+          h1 Element: exercise
+          +img("img/exercise.png")
+        .col-sm-6
+          h1 CSS/mixin
+          +exnumber(2, "Are ion mere?")
+          +exnumber("8.", "Nu!")
+          +exnumber("9!")
+            .ex-requirement
+              strong De 
+              em ce?
+              
+      hr
+      .row
+        .col-sm-6
+          h1 Element: big ugly vertical image strip with no functionality whatsoever
+          +img("img/verticalstrip.png")
+        .col-sm-6
+          h1 CSS/mixin
+      hr
+      .row
+        .col-sm-6
+          h1 Element: lesson titles
+          +img("img/title.png")
+        .col-sm-6
+          h1 CSS/mixin
+          h1.titlu This is a lesson title
+          h3.titlu This is a sublesson title
+      hr
+      .row
+        .col-sm-6
+          h1 Element: yellow box
+          +img("img/defpan.png")
+        .col-sm-6
+          h1 CSS/mixin
+          .yellowbox
+            p This is a yellow box
+      hr
+      .row
+        .col-sm-6
+          h1 Element: blue box
+          +img("img/bluebox.png")
+        .col-sm-6
+          h1 CSS/mixin
+          .bluebox
+            p This is a blue box
+      hr
+      .row
+        .col-sm-6
+          h1 Element: Blue subtitle 
+          +img("img/bluetitle.png")
+          +img("img/bluetitle2.png")
+          +img("img/bluetitle3.png")
+        .col-sm-6
+          h1 CSS/mixin
+          +bluetitle({
+            img: "kitten.jpg",
+            title: "This is a blue title",
+            subtitle: "This is a subtitle"
+            })
+          +bluetitle({
+            img: "kitten.jpg",
+            title: "This is just a cat and a blue title"
+            })
+          h3.bluetitle This is just a blue title
+      hr
+      .row
+        .col-sm-6
+          h1 Element: Table 1
+          +img("img/table.png")
+        .col-sm-6
+          h1 CSS/mixin
+          table.table-1
+            thead
+              tr
+                th This is an
+                th awful looking
+                th table
+            tbody
+              tr
+                td blah 
+                td 1
+                td 1
+              tr
+                td blah 
+                td 2
+                td 2
+              tr
+                td blah 
+                td 3
+                td 3
+          p don't know how to add border radius to a table but maybe that's for the best 
+      hr
+      .row
+        .col-sm-6
+          h1 Element: Table 2
+          +img("img/table2.png")
+        .col-sm-6
+          h1 CSS/mixin
+          table.table-2
+            thead
+              tr
+                th This is another
+                th awful looking
+                th table
+            tbody
+              tr
+                td blah 
+                td 1
+                td 1
+              tr
+                td blah 
+                td 2
+                td 2
+              tr
+                td blah 
+                td 3
+                td 3
+      hr
+      .row
+        .col-sm-6
+          h1 Element: Table 2
+          +img("img/table3.png")
+        .col-sm-6
+          h1 CSS/mixin
+          table.table-3
+            thead
+              tr
+                th This is yet another
+                th awful looking
+                th table
+            tbody
+              tr
+                td blah 
+                td 1
+                td 1
+              tr
+                td blah 
+                td 2
+                td 2
+              tr
+                td blah 
+                td 3
+                td 3
+      hr
+      .row
+        .col-sm-6
+          h1 Element: Info box
+          +img('img/infopan.png')
+        .col-sm-6
+          h1 CSS/mixin
+          +info()
+            p This is an info box. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      hr
+      .row
+        .col-sm-6
+          h1 Element: Footnotes
+          +img('img/footnotes.png')
+        .col-sm-6
+          h1 CSS/mixin
+          p Avem din net-children. De adăugat

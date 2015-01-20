@@ -1,1 +1,166 @@
 lfa-framework()
+
+@import _colors
+
+body
+  font-family: sans-serif
+  .header
+    margin-top: 1em
+    width: 100%
+    margin-bottom: 3em
+    .line
+      background-color: yellow
+      height: auto
+      width: 100%
+      border-radius: 5px 5px 0 5px
+    .image
+      padding: 0
+      border: 6px solid yellow
+      border-radius: 0 0 5px 5px
+    h1
+      margin: 0
+      line-height: 1.2em
+      @media(max-width:1200px) and (min-width:768px)
+        font-size: 1.5em
+      @media(max-width:480px)
+        font-size: 1.5em
+    h3
+      margin-top: 0.7em
+      line-height: 1.1em
+    .lectie
+      padding: .5em
+      margin: 0
+      font-size: .9em
+  ul,li,p
+    text-align: justify
+    font-size: 1em
+  .yellowbox
+    background-color: pale_yellow
+    &.info
+      position: relative
+      margin 1em
+      margin-top 4.5em
+      padding-right 3em
+      img
+        position: absolute
+        height: 4em
+        width: 4em
+        left: 92%
+        bottom: 92%
+  .bluebox
+    background-color: blue
+  .yellowbox, .bluebox
+    border-radius: 10px
+    padding: 1em
+    margin-top: .5em
+    margin-bottom: .5em
+    p
+      margin 0
+      font-size: .9em
+  .titlu
+    font-family: sans-serif
+    font-weight: 700
+    color: orange
+  .blue-title
+    position: relative
+    height: auto
+    margin 1em
+    width: auto
+    img, span
+      display: inline-block
+    span
+      position: absolute
+      top: 7%
+      margin-left: .5em
+      height: auto
+      width: auto
+    img
+      height: 70px
+      width: 70px
+    h4
+      margin 0
+      color: dark_blue
+      font-size: 1.3em
+      font-family: serif
+      @media(max-width: 480px)
+        font-size: 1.2em
+    h6
+      margin 0
+      font-weight: 500
+      @media(max-width: 480px)
+        font-size: 1em
+  .bluetitle
+    color: dark_blue
+    font-family: serif
+  table
+    font-size: .9em
+    border-collapse: collapse
+    th,td
+      padding: 1em
+      text-align: center
+      font-weight: 300
+    td
+      padding .5em
+    &.table-1
+      border-collapse: separate
+      thead
+        th:nth-child(odd)
+          background-color: #333
+          color: white
+        th:nth-child(even)
+          background-color: #444
+          color: pale_yellow
+        th:first-child
+          border-radius: 15px 0 0 0
+        th:last-child
+          border-radius: 0 15px 0 0
+      tbody
+        tr
+          &:nth-child(odd)
+              td:nth-child(odd)
+                background-color: medium_gray
+              td:nth-child(even)
+                background-color: light_gray
+          &:nth-child(even)
+              td:nth-child(odd)
+                background-color: medium_yellow
+              td:nth-child(even)
+                background-color: pale_yellow
+          &:last-child
+            td:first-child
+              border-radius: 0 0 0 15px
+            td:last-child
+              border-radius: 0 0 15px 0
+    &.table-2
+      border 1px solid #333
+      th, td
+        border 1px solid #333
+      thead
+        background-color: blue
+        th
+          padding .5em
+      tbody
+        tr *:first-child
+          background-color: pale_yellow
+    &.table-3
+      border 1px solid #333
+      th, td
+        border 1px solid #333
+      thead
+        background-color: dark_blue
+        color: white
+        th
+          padding .5em
+.elementlist
+  .row
+    // border-top: 3px solid #ddd
+    margin: 1em 0
+    h1
+      margin-bottom: 1em
+
+.ex-number
+  .ex-icon
+    text-align: center
+    color: red
+    background-color: rgb(255,248,174)
+    border-radius: 50%
