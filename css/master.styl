@@ -9,14 +9,14 @@ body
     &.info
       position: relative
       margin 1em
-      margin-top 3em
+      margin-top 4.5em
       padding-right 3em
       img
         position: absolute
-        height: 50px
-        width: 50px
-        left: 93%
-        bottom: 93%
+        height: 4em
+        width: 4em
+        left: 92%
+        bottom: 92%
   .bluebox
     background-color: rgb(158,214,244)
   .yellowbox, .bluebox
@@ -27,11 +27,11 @@ body
     p
       margin 0
       font-size: .9em
-  .title
+  .titlu
     font-family: sans-serif
     font-weight: 700
     color: rgb(244,117,33)
-  .bluetitle
+  .blue-title
     position: relative
     height: auto
     margin 1em
@@ -40,7 +40,7 @@ body
       display: inline-block
     span
       position: absolute
-      top: 10%
+      top: 7%
       margin-left: .5em
       height: auto
       width: auto
@@ -55,26 +55,62 @@ body
     h6
       margin 0
       font-weight: 500
+  .bluetitle
+    color: rgb(37,63,142)
+    font-family: serif
   table
     font-size: .9em
     border-collapse: collapse
     margin .5em
     th,td
-      padding: .5em
+      padding: 1em
       text-align: center
       font-weight: 300
-    thead
-      background-color: #333
-      color: white
-      td:not(:last-child), th:not(:last-child)
-        border-right: 1px solid white
-    tbody
-      tr
-        &:nth-child(odd)
+    td
+      padding .5em
+    &.table-1
+      thead
+        th:nth-child(odd)
+          background-color: #333
+          color: white
+        th:nth-child(even)
+          background-color: #444
+          color: rgb(255,248,174)
+      tbody
+        tr
+          &:nth-child(odd)
+              td:nth-child(odd)
+                background-color: rgb(220,221,223)
+              td:nth-child(even)
+                background-color: rgb(230,231,233)
+          &:nth-child(even)
+              td:nth-child(odd)
+                background-color: rgb(255,244,109)
+              td:nth-child(even)
+                background-color: rgb(255,248,174)
+    &.table-2
+      border 1px solid #333
+      th, td
+        border 1px solid #333
+      thead
+        background-color: rgb(158,214,244)
+        th
+          padding .5em
+      tbody
+        tr *:first-child
           background-color: rgb(255,248,174)
-          td:not(:last-child), th:not(:last-child)
-            border-right: 1px solid white
-        &:nth-child(even)
-          background-color: #ddd
-          td:not(:last-child), th:not(:last-child)
-            border-right: 1px solid white
+    &.table-3
+      border 1px solid #333
+      th, td
+        border 1px solid #333
+      thead
+        background-color: rgb(14,55,118)
+        color: white
+        th
+          padding .5em
+.elementlist
+  .row
+    border-top: 3px solid #ddd
+    margin-top: 1em
+    h1
+      margin-bottom: 1em
