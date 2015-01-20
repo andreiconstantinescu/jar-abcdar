@@ -1,5 +1,23 @@
 lfa-framework()
 
+.header
+  margin-top: 2em
+  .col-sm-9
+    padding-right: 0
+    background-color: rgb(254,240,2)
+  .image
+    padding: 0
+    border: 4px solid rgb(254,240,2)
+    border-radius: 5px
+  h2
+    margin: 0
+    color: rgb(244,117,33)
+  h3
+    margin: 0
+  .lectie
+    padding: 0.5em 0.1em
+    margin: 0
+    font-size: 1em
 body
   font-family: sans-serif
   ul,li,p
@@ -62,7 +80,6 @@ body
   table
     font-size: .9em
     border-collapse: collapse
-    margin .5em
     th,td
       padding: 1em
       text-align: center
@@ -70,6 +87,7 @@ body
     td
       padding .5em
     &.table-1
+      border-collapse: separate
       thead
         th:nth-child(odd)
           background-color: #333
@@ -77,6 +95,10 @@ body
         th:nth-child(even)
           background-color: #444
           color: rgb(255,248,174)
+        th:first-child
+          border-radius: 15px 0 0 0
+        th:last-child
+          border-radius: 0 15px 0 0
       tbody
         tr
           &:nth-child(odd)
@@ -89,6 +111,11 @@ body
                 background-color: rgb(255,244,109)
               td:nth-child(even)
                 background-color: rgb(255,248,174)
+          &:last-child
+            td:first-child
+              border-radius: 0 0 0 15px
+            td:last-child
+              border-radius: 0 0 15px 0
     &.table-2
       border 1px solid #333
       th, td
