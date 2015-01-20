@@ -1,12 +1,14 @@
 lfa-framework()
 
+@import _colors
+
 body
   font-family: sans-serif
   ul,li,p
     text-align: justify
     font-size: 1em
   .yellowbox
-    background-color: rgb(255,248,174)
+    background-color: pale_yellow
     &.info
       position: relative
       margin 1em
@@ -19,7 +21,7 @@ body
         left: 92%
         bottom: 92%
   .bluebox
-    background-color: rgb(158,214,244)
+    background-color: blue
   .yellowbox, .bluebox
     border-radius: 10px
     padding: 1em
@@ -31,7 +33,7 @@ body
   .titlu
     font-family: sans-serif
     font-weight: 700
-    color: rgb(244,117,33)
+    color: orange
   .blue-title
     position: relative
     height: auto
@@ -50,14 +52,18 @@ body
       width: 70px
     h4
       margin 0
-      color: rgb(37,63,142)
+      color: dark_blue
       font-size: 1.3em
       font-family: serif
+      @media(max-width: 480px)
+        font-size: 1.2em
     h6
       margin 0
       font-weight: 500
+      @media(max-width: 480px)
+        font-size: 1em
   .bluetitle
-    color: rgb(37,63,142)
+    color: dark_blue
     font-family: serif
   table
     font-size: .9em
@@ -76,36 +82,36 @@ body
           color: white
         th:nth-child(even)
           background-color: #444
-          color: rgb(255,248,174)
+          color: pale_yellow
       tbody
         tr
           &:nth-child(odd)
               td:nth-child(odd)
-                background-color: rgb(220,221,223)
+                background-color: medium_gray
               td:nth-child(even)
-                background-color: rgb(230,231,233)
+                background-color: light_gray
           &:nth-child(even)
               td:nth-child(odd)
-                background-color: rgb(255,244,109)
+                background-color: medium_yellow
               td:nth-child(even)
-                background-color: rgb(255,248,174)
+                background-color: pale_yellow
     &.table-2
       border 1px solid #333
       th, td
         border 1px solid #333
       thead
-        background-color: rgb(158,214,244)
+        background-color: blue
         th
           padding .5em
       tbody
         tr *:first-child
-          background-color: rgb(255,248,174)
+          background-color: pale_yellow
     &.table-3
       border 1px solid #333
       th, td
         border 1px solid #333
       thead
-        background-color: rgb(14,55,118)
+        background-color: dark_blue
         color: white
         th
           padding .5em
