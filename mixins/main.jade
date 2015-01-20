@@ -11,3 +11,38 @@ mixin header(number, title, subtitle)
       strong #{title}
     h3
       strong #{subtitle}
+
+mixin info()
+  if block
+    .yellowbox.info
+      img(src="img/kitten.jpg")
+      block
+mixin bluetitle(options)
+  .blue-title
+    if (options.img)
+      img(src="img/"+options.img)
+      //- div
+      span
+        h4= options.title
+        if(options.subtitle)
+          h6= options.subtitle
+    else
+      h4= options.title
+      if(options.subtitle)
+        h6= options.subtitle
+  //- .blue-title
+  //-   if (options.img)
+  //-     .media
+  //-       .media-left
+  //-         a(href="#")
+  //-           img.media-object(src="img/"+options.img)
+  //-       .media-body
+  //-         h4.media-heading= options.title
+  //-         if(options.subtitle)
+  //-           h6= options.subtitle
+  //-   else
+  //-     .media
+  //-       .media-body
+  //-         h4.media-heading= options.title
+  //-         if(options.subtitle)
+  //-           h6= options.subtitle
