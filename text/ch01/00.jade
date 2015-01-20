@@ -1,15 +1,17 @@
 +article("Chapter 1")
   +section("Intro")
   
-    +header("1", "Planificarea finanţelor proprii: Bugete, Venituri, Cheltuieli", "Planifică-ţi resursele financiare!")
     
   .elementlist
+    hr
     .row
       .col-sm-6
         h1 Element: header
         +img("img/borderedimg2.png")
       .col-sm-6
         h1 CSS/mixin
+        +header("1", "Planificarea finanţelor proprii: Bugete, Venituri, Cheltuieli", "Planifică-ţi resursele financiare!")
+    hr
     .row
       .col-sm-6
         h1 Element: footer
@@ -17,18 +19,28 @@
         +img("img/footer2.png")
       .col-sm-6
         h1 CSS/mixin
+    hr
     .row
       .col-sm-6
         h1 Element: exercise
         +img("img/exercise.png")
       .col-sm-6
         h1 CSS/mixin
+        +exnumber(2, "Are ion mere?")
+        +exnumber("8.", "Nu!")
+        +exnumber("9!")
+          .ex-requirement
+            strong De 
+            em ce?
+            
+    hr
     .row
       .col-sm-6
         h1 Element: big ugly vertical image strip with no functionality whatsoever
         +img("img/verticalstrip.png")
       .col-sm-6
         h1 CSS/mixin
+    hr
     .row
       .col-sm-6
         h1 Element: lesson titles
@@ -37,6 +49,7 @@
         h1 CSS/mixin
         h1.titlu This is a lesson title
         h3.titlu This is a sublesson title
+    hr
     .row
       .col-sm-6
         h1 Element: yellow box
@@ -45,6 +58,7 @@
         h1 CSS/mixin
         .yellowbox
           p This is a yellow box
+    hr
     .row
       .col-sm-6
         h1 Element: blue box
@@ -53,6 +67,7 @@
         h1 CSS/mixin
         .bluebox
           p This is a blue box
+    hr
     .row
       .col-sm-6
         h1 Element: Blue subtitle 
@@ -71,6 +86,7 @@
           title: "This is just a cat and a blue title"
           })
         h3.bluetitle This is just a blue title
+    hr
     .row
       .col-sm-6
         h1 Element: Table 1
@@ -97,6 +113,7 @@
               td 3
               td 3
         p don't know how to add border radius to a table but maybe that's for the best 
+    hr
     .row
       .col-sm-6
         h1 Element: Table 2
@@ -122,6 +139,7 @@
               td blah 
               td 3
               td 3
+    hr
     .row
       .col-sm-6
         h1 Element: Table 2
@@ -147,6 +165,7 @@
               td blah 
               td 3
               td 3
+    hr
     .row
       .col-sm-6
         h1 Element: Info box
@@ -155,6 +174,7 @@
         h1 CSS/mixin
         +info()
           p This is an info box. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    hr
     .row
       .col-sm-6
         h1 Element: Footnotes

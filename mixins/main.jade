@@ -46,3 +46,19 @@ mixin bluetitle(options)
   //-         h4.media-heading= options.title
   //-         if(options.subtitle)
   //-           h6= options.subtitle
+
+
+mixin exnumber(number,requirement)
+  .ex-number
+    .row
+      .col-xs-2 
+        .ex-icon= number
+      .col-xs-10
+        if (requirement)
+          .ex-requirement= requirement
+          .ex-content
+            block
+        else
+          
+          .ex-content
+            block
