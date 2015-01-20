@@ -4,42 +4,29 @@ lfa-framework()
 
 body
   font-family: sans-serif
-  // .header
-  //   margin-top: 2em
-  //   .col-sm-9
-  //     padding-right: 0
-  //     background-color: rgb(254,240,2)
-  //   .image
-  //     padding: 0
-  //     border: 4px solid rgb(254,240,2)
-  //     border-radius: 5px
-  //   h2
-  //     margin: 0
-  //     color: rgb(244,117,33)
-  //   h3
-  //     margin: 0
-  //   .lectie
-  //     padding: 0.5em 0.1em
-  //     margin: 0
-  //     font-size: 1em
   .header
-    margin-top: 2em
+    margin-top: 1em
     width: 100%
+    margin-bottom: 3em
     .line
       background-color: yellow
       height: auto
       width: 100%
+      border-radius: 5px 5px 0 5px
     .image
-      margin-top: 1em
       padding: 0
       border: 6px solid yellow
-      border-radius: 5px
+      border-radius: 0 0 5px 5px
     h1
       margin: 0
-      // @media(max-width:991px),(min-width:768px)
-      //   font-size: 1em
+      line-height: 1.2em
+      @media(max-width:1200px) and (min-width:768px)
+        font-size: 1.5em
+      @media(max-width:480px)
+        font-size: 1.5em
     h3
-      margin: 0
+      margin-top: 0.7em
+      line-height: 1.1em
     .lectie
       padding: .5em
       margin: 0
