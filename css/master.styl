@@ -3,7 +3,8 @@ lfa-framework()
 @import _colors
 
 body
-  font-family: sans-serif
+  font-family: "Open Sans Condensed"
+  font-weight: 300
   .header
     margin-top: 1em
     width: 100%
@@ -36,12 +37,16 @@ body
     font-size: 1em
     margin-top: .3em
     margin-bottom: .3em
+  ul li
+    font-size: 1em
   .yellowbox
     background-color: pale_yellow
     &.info
       position: relative
       margin-top 2em
       padding-right 50px
+      @media(max-width: 768px)
+        margin-right: 2em
       img
         position: absolute
         height: 60px
@@ -55,9 +60,9 @@ body
     padding: 1em
     margin-top: .5em
     margin-bottom: .5em
+    font-size: .9em
     p
       margin 0
-      font-size: .9em
   .titlu
     font-family: sans-serif
     font-weight: 700
@@ -70,6 +75,7 @@ body
     img, span
       display: inline-block
     span
+      margin-top: -.5em
       position: absolute
       top: 7%
       margin-left: .5em
@@ -89,7 +95,7 @@ body
       margin 0
       font-weight: bold
       @media(max-width: 480px)
-        font-size: 1em
+        font-size: .8em
   .bluetitle
     color: dark_blue
     font-family: serif
