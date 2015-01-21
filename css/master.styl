@@ -184,11 +184,40 @@ body
 .footnote
   cursor: pointer
 .footer
+  height: 10em
+  position: relative
+  .text
+    position: absolute
+    left: 8%
+    text-align: center
   .icons
-    position: relative
+    z-index: 1
+    position: absolute
+    bottom: 5%
+    left: 0
+    display: inline-block
+    width: 75%
+    text-align: center
     img
       width: 15%
       height: auto
       display: inline-block
       bottom: 0
       left: 0
+  .banker
+    z-index: 1
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 25%
+    display: inline-block
+    img
+      width: 100%
+      margin: 0 auto
+  .line
+    height: 12%
+    width: 100%
+    background-color: pale_yellow
+    position: absolute
+    bottom: 0
+    z-index: 0
