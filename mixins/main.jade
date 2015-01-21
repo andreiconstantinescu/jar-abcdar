@@ -45,3 +45,7 @@ mixin exnumber(number,requirement)
           
           .ex-content
             block
+              
+mixin footnote(text)
+  span.footnote
+    a(tabindex="0", data-trigger="focus hover", class="footnote item-popover", type="button", data-placement="auto", data-content= text) * 
