@@ -35,7 +35,7 @@ mixin bluetitle(options)
 mixin exnumber(number,requirement)
   .ex-number
     .row
-      .col-xs-2 
+      .col-xs-2
         .ex-icon= number
       .col-xs-10
         if (requirement)
@@ -50,3 +50,18 @@ mixin exnumber(number,requirement)
 mixin footnote(text)
   span.footnote
     a(tabindex="0", data-trigger="focus hover", class="footnote item-popover", type="button", data-placement="auto", data-content= text) * 
+    
+mixin footer() 
+  .footer
+    .text
+      h1 Tu cu cine faci banking?
+    .icons
+      img.icon(src="img/footer-icons/at.png")
+      img.icon(src="img/footer-icons/atm.png")
+      img.icon(src="img/footer-icons/dish.png")
+      img.icon(src="img/footer-icons/gaspump.png")
+      img.icon(src="img/footer-icons/luggage.png")
+      img.icon(src="img/footer-icons/tv.png")
+    .banker 
+      img(src="img/footer-icons/banker.png")
+    .line
