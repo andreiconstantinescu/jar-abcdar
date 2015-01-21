@@ -1,3 +1,5 @@
+@import '../addons/lfa-exercises/css/main'
+
 lfa-framework()
 
 @import _colors
@@ -65,7 +67,7 @@ body
   .blue-title
     position: relative
     height: auto
-    margin 1em
+    margin 1em 0 1em 0
     width: auto
     img, span
       display: inline-block
@@ -87,7 +89,7 @@ body
         font-size: 1.2em
     h6
       margin 0
-      font-weight: 500
+      font-weight: bold
       @media(max-width: 480px)
         font-size: 1em
   .bluetitle
@@ -96,14 +98,19 @@ body
   table
     font-size: .9em
     border-collapse: collapse
+    border 1px solid black
+    margin-top: 1em
+    margin-bottom: 1em
     th,td
-      padding: 1em
-      text-align: center
-      font-weight: 300
+      border 1px solid black
+      padding .5em
     td
       padding .5em
     &.table-1
       border-collapse: separate
+      border: none
+      th,td
+        border: none
       thead
         th:nth-child(odd)
           background-color: #333
@@ -144,14 +151,21 @@ body
         tr *:first-child
           background-color: pale_yellow
     &.table-3
-      border 1px solid #333
-      th, td
-        border 1px solid #333
       thead
         background-color: dark_blue
         color: white
         th
           padding .5em
+    &.table-4
+      thead
+        background-color: purple
+        color: white
+        th
+          padding .5em
+      tbody
+        tr
+          &:nth-child(odd)
+            background-color: light_blue
 .elementlist
   .row
     // border-top: 3px solid #ddd
