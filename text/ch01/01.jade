@@ -34,7 +34,7 @@
       })
     p Completaţi cercurile interioare şi exterioare pe măsură ce vă gândiţi şi discutaţi împreună categoriile tipice de buget. Două categorii au fost completate pentru a vă servi ca exemplu.
     h2 FIXME - it's a screenshot
-    +img('img/lectia1-buget-screenshot.png')
+    +drawingpad({backgroundImage: 'img/lectia1-buget-screenshot.png'})
     p Multe familii își alcătuiesc un buget scris care le arată de câți bani dispun lunar și cât de mulţi bani vor cheltui pentru categorii precum chirie, utilităţi, alimente, îmbrăcăminte, divertisment etc. Alte persoane ţin o evidenţă exactă a tuturor cheltuielilor şi veniturilor, ajustând frecvent bugetul. Mulți, însă, au o idee vagă despre destinaţia banilor lor şi ţin un buget orientativ în memorie sau deloc.
     p Bugetele sunt personale şi unice. Există numeroase decizii pe care trebuie să le luăm atunci când alcătuim un buget. Unii oameni aleg să cheltuiască o sumă importantă din banii câştigaţi pentru o maşină nouă, în timp ce alţii aleg o maşină second-hand şi alocă mai mulţi bani pentru haine sau chirie. O parte dintre decizii influenţează şi alte decizii.
     .pull-left.col-sm-4
@@ -54,45 +54,95 @@
     p Părinții ei îi dau pentru cheltuieli lunare (bani de buzunar) 150 lei. În trei săptămâni, Maria va da o petrecere surpriză pentru prietena ei Sara. Această petrecere o va costa 50 lei, dar ea planifică să cumpere şi o rochie nouă pentru petrecere, în valoare de 50 lei, iar cadoul ei pentru Sara va costa 35 lei.
     p Mai trebuie să îşi repare DVD player-ul stricat şi această reparaţie o va costa 79 lei. De asemenea, ea s-a hotărât să înceapă să economisească pentru Crăciun, sărbătoare care va fi peste patru luni şi cu ocazia căreia cheltuieşte de obicei în jur de 150 lei pe cadourile pentru prieteni şi rude.
     p Deşi părinţii au promis că o vor ajuta să îşi plătească taxele de şcolarizare pentru facultate, ea ştie că va trebui să plătească pentru cazare, masă şi cărţi. Camera şi masa o vor costa 650 lei pentru fiecare semestru la o universitate de stat şi cărţile, 300 lei.
-    +exnumber(1, "Care este venitul lunar net al Mariei?_____ lei")
-    +exnumber(2, "Care este valoarea medie a cheltuielilor lunare făcute de Maria?_____ lei")
-    +exnumber(3, "Cu ce sumă de bani rămâne Maria după ce îşi plăteşte cheltuielile lunare?_____ lei")
+    +exnumber(1, "Care este venitul lunar net al Mariei?")
+      +exercise({name:"l1ex1", ignoreScore: true})
+        .inline-block
+          +textline({name:"l1ex1-1", type: "numeric", size:"5", regexp: "^&"})
+        span #{" "}lei
+    +exnumber(2, "Care este valoarea medie a cheltuielilor lunare făcute de Maria?")
+      +exercise({name:"l1ex2", ignoreScore: true})
+        .inline-block
+          +textline({name:"l1ex2-1", type: "numeric", size:"5", regexp: "^&"})
+        span #{" "}lei
+    +exnumber(3, "Cu ce sumă de bani rămâne Maria după ce îşi plăteşte cheltuielile lunare?")
+      +exercise({name:"l1ex3", ignoreScore: true})
+        .inline-block
+          +textline({name:"l1ex3-1", type: "numeric", size:"5", regexp: "^&"})
+        span #{" "}lei
     +exnumber(4, "Completaţi următorul tabel cu Planificarea obiectivelor.")
-    table.table-4
-      thead
-        tr
-          th Care sunt obiectivele pe termen scurt ale Mariei?
-          th Care este obiectivul ei pe termen lung ? (un an)
-      tbody
-        tr
-          td ...
-          td ...
-    +exnumber(5, "Dacă petrecerea pe care Maria o va organiza va costa 135 lei, cu ce sumă de bani va rămâne ea luna aceasta?_____ lei")
-    +exnumber(6, "Câţi bani este necesar să economisească Maria în fiecare lună pentru următoarele patru luni ca să aibă suficienţi bani pentru cumpărăturile de Crăciun?_____ lei")
+      +exercise({name:"l1ex4", ignoreScore:true})
+        table.table-4
+          thead
+            tr
+              th Care sunt obiectivele pe termen scurt ale Mariei?
+              th Care este obiectivul ei pe termen lung ? (un an)
+          tbody
+            tr
+              td
+                +textline({name:"l1ex4-1", type: "multiline", rows:"3", placeholder: '...'})
+              td
+                +textline({name:"l1ex4-2", type: "multiline", rows:"3", placeholder: '...'})
+    +exnumber(5, "Dacă petrecerea pe care Maria o va organiza va costa 135 lei, cu ce sumă de bani va rămâne ea luna aceasta?")
+      +exercise({name:"l1ex5",ignoreScore: true})
+        .inline-block
+          +textline({name:"l1ex5-1", type: "numeric", size:"5", regexp: "^&"})
+        span #{" "}lei
+    +exnumber(6, "Câţi bani este necesar să economisească Maria în fiecare lună pentru următoarele patru luni ca să aibă suficienţi bani pentru cumpărăturile de Crăciun?")
+      +exercise({name:"l1ex6",ignoreScore: true})
+        .inline-block
+          +textline({name:"l1ex6-1", type: "numeric", size:"5", regexp: "^&"})
+        span #{" "}lei
     +exnumber(7, "Completaţi mai jos bugetul lunar al Mariei.")
-    table.table-4
-      thead
-        tr
-          th Venitul lunar net (VLN)
-          th ...lei
-      tbody
-        tr
-          td Transport
-          td ...lei
-        tr
-          td Cheltuieli curente:
-          td ...lei
-        tr
-          td ECONOMII pentru cumpărăturile de Crăciun
-          td ...lei
-        tr
-          td Cheltuieli totale (Suma costurilor de transport, cheltuielilor curente şi economiilor pentru cheltuielile de Crăciun)
-          td ...lei
-        tr
-          td Venit rămas (diferenţa dintre VLN şi cheltuielile totale)
-          td ...lei
-    +exnumber(8, "Ce sumă de bani îi va rămâne Mariei în această lună după ce şi-a plătit cheltuielile, a economisit pentru Crăciun şi a organizat petrecerea pentru Sara?_____ lei")
-    +exnumber(9, "Câţi bani credeţi că va trebui să economisească Maria în fiecare lună, pentru a-şi atinge obiectivul pe termen lung?_____ lei")
+      +exercise({name:"l1ex7", ignoreScore: true})
+        table.table-4
+          thead
+            tr
+              th Venitul lunar net (VLN)
+              th
+                .inline-block
+                  +textline({name:'l1ex7-1', size: "5", type:"numeric", regexp:"^&"})
+                span lei
+          tbody
+            tr
+              td Transport
+              td
+                .inline-block
+                  +textline({name:'l1ex7-2', size: "5", type:"numeric", regexp:"^&"})
+                span lei
+            tr
+              td Cheltuieli curente:
+              td
+                .inline-block
+                  +textline({name:'l1ex7-3', size: "5", type:"numeric", regexp:"^&"})
+                span lei
+            tr
+              td ECONOMII pentru cumpărăturile de Crăciun
+              td
+                .inline-block
+                  +textline({name:'l1ex7-4', size: "5", type:"numeric", regexp:"^&"})
+                span lei
+            tr
+              td Cheltuieli totale (Suma costurilor de transport, cheltuielilor curente şi economiilor pentru cheltuielile de Crăciun)
+              td
+                .inline-block
+                  +textline({name:'l1ex7-5', size: "5", type:"numeric", regexp:"^&"})
+                span lei
+            tr
+              td Venit rămas (diferenţa dintre VLN şi cheltuielile totale)
+              td
+                .inline-block
+                  +textline({name:'l1ex7-6', size: "5", type:"numeric", regexp:"^&"})
+                span lei
+    +exnumber(8, "Ce sumă de bani îi va rămâne Mariei în această lună după ce şi-a plătit cheltuielile, a economisit pentru Crăciun şi a organizat petrecerea pentru Sara?")
+      +exercise({name:'l1ex8', ignoreScore: true})
+        .inline-block
+          +textline({name:'l1ex8-1', size: '5', type: 'numeric', regexp:'^&'})
+        span #{" "}lei
+    +exnumber(9, "Câţi bani credeţi că va trebui să economisească Maria în fiecare lună, pentru a-şi atinge obiectivul pe termen lung?")
+      +exercise({name:'l1ex9', ignoreScore: true})
+        .inline-block
+          +textline({name:'l1ex9-1', size: '5', type: 'numeric', regexp:'^&'})
+        span #{" "}lei
     p Mai devreme sau mai târziu va trebui să vă planificaţi bugetul personal. Învăţând despre modul în care dobândiți veniturile, resursele financiare (de unde vă vin banii și câți) și categoriile uzuale de cheltuieli care sunt incluse în majoritatea bugetelor personale şi despre procentele din venit pe care oamenii le alocă acestor categorii, vă va ajuta mai târziu. Pentru a vă asigura un viitor financiar sigur, anticiparea veniturilor și cheltuielilor şi planificarea lor este obligatorie. Alcătuirea unui buget este o parte deosebit de importantă a acestei planificări. Un buget este schiţarea veniturilor şi cheltuielilor planificate pentru o perioadă de timp specificată.
     +bluetitle({
       img:'bla.png',
@@ -104,104 +154,153 @@
         strong Instrucţiuni: 
         |Pentru a plăti echivalentul realizării unei nevoi, a unui obiectiv pe termen lung, o persoană trebuie să economisească lunar o anumită sumă de bani. Ce reguli de bugetare aţi putea aplica în cazul următorului buget pentru a atinge obiectivul de a economisi 300 lei pe lună?
     p Notaţi în spaţiul de mai jos trei reguli propuse individual şi trei reguli descoperite împreună cu colegii.
-    h1 textline here
-    table
-      tr
-        th Venit
-        th Înainte
-        th După
-      tr
-        th Venituri totale
-        td 1.500 lei
-        td 1.500 lei
-      tr
-        th Cheltuieli fixe
-        td
-        td
-      tr
-        td Chirie pentru locuință
-        td 500 lei
-        td 500 lei
-      tr
-        td Asigurare de sănătate
-        td 50 lei
-        td 50 lei
-      tr
-        td Asigurarea locuinței
-        td 100 lei
-        td 20 lei
-      tr
-        td Asigurarea auto
-        td 50 lei
-        td 100 lei
-      tr
-        th Economii planificate (oprite automat din salariu)
-        td 100 lei
-        td ... lei
-      tr
-        th Cheltuieli fixe totale
-        td 770 lei
-        td ... lei
-      tr
-        th Cheltuieli variabile
-        td
-        td
-      tr
-        td Alimente
-        td 165 lei
-        td ...lei
-      tr
-        td Masa în oraș
-        td 55 lei
-        td ...lei
-      tr
-        td Utilităţi
-        td 105 lei
-        td ...lei
-      tr
-        td Medicale
-        td 40 lei
-        td ...lei
-      tr
-        td Îmbrăcăminte
-        td 30 lei
-        td ...lei
-      tr
-        td Cadouri
-        td 30 lei
-        td ...lei
-      tr
-        td Cărți, reviste și ziare
-        td 40 lei
-        td ...lei
-      tr
-        td Mobilarea și dotarea casei
-        td 40 lei
-        td ...lei
-      tr
-        td Îngrijire personală
-        td 30 lei
-        td ...lei
-      tr
-        td Timp liber
-        td 50 lei
-        td ...lei
-      tr
-        td Card bancar
-        td 30 lei
-        td ...lei
-      tr
-        td Diverse/personale
-        td 35 lei
-        td ...lei
-      tr
-        th Cheltuieli variabile totale
-        td 730 lei
-        td ...lei
-      tr
-        th Cheltuieli totale
-        td 1.500 lei
-        td ...lei
+    +exercise({name:'l1ex10', ignoreScore: true})
+      +textline({name:'l1ex10-1', rows: '10', type: 'multiline', placeholder: '.....'})
+      table
+        tr
+          th Venit
+          th Înainte
+          th După
+        tr
+          th Venituri totale
+          td 1.500 lei
+          td 1.500 lei
+        tr
+          th Cheltuieli fixe
+          td
+          td
+        tr
+          td Chirie pentru locuință
+          td 500 lei
+          td 500 lei
+        tr
+          td Asigurare de sănătate
+          td 50 lei
+          td 50 lei
+        tr
+          td Asigurarea locuinței
+          td 100 lei
+          td 20 lei
+        tr
+          td Asigurarea auto
+          td 50 lei
+          td 100 lei
+        tr
+          th Economii planificate (oprite automat din salariu)
+          td 100 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-2', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          th Cheltuieli fixe totale
+          td 770 lei
+          td 
+            .inline-block 
+              +textline({name:'l1ex10-3', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          th Cheltuieli variabile
+          td
+          td
+        tr
+          td Alimente
+          td 165 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-4', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          td Masa în oraș
+          td 55 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-5', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          td Utilităţi
+          td 105 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-6', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          td Medicale
+          td 40 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-7', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          td Îmbrăcăminte
+          td 30 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-8', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          td Cadouri
+          td 30 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-9', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          td Cărți, reviste și ziare
+          td 40 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-10', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          td Mobilarea și dotarea casei
+          td 40 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-11', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          td Îngrijire personală
+          td 30 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-12', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          td Timp liber
+          td 50 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-13', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          td Card bancar
+          td 30 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-14', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          td Diverse/personale
+          td 35 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-15', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          th Cheltuieli variabile totale
+          td 730 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-16', type: 'numeric', size: '5'})
+            span #{" "} lei
+        tr
+          th Cheltuieli totale
+          td 1.500 lei
+          td
+            .inline-block 
+              +textline({name:'l1ex10-17', type: 'numeric', size: '5'})
+            span #{" "} lei
     p Ori de câte ori trebuie să planificaţi modul în care veţi cheltui banii, lucraţi cu bugete. Pe măsură ce vă veţi asuma mai multe responsabilităţi – un job, o maşină, o casă în care să locuiţi, animale, proprietăţi şi o familie – veţi avea nevoie să determinaţi câţi bani veţi cheltui pentru a acoperi fiecare categorie de cheltuieli, în funcție de câți bani veți avea ca venituri. În vederea pregătirii pentru aceste viitoare responsabilităţi, veţi exersa alcătuirea bugetului unei familii în timpul acestor ore de curs.
     h3.titlu Activități suplimentare
     +bluetitle({
@@ -233,7 +332,8 @@
     p Discută în familie şi împreună stabiliţi care sunt priorităţile tale pentru anul acesta.
     p După aceea construiește un buget lunar de venituri și cheltuieli. Împărtăşeşte cu părinții tăi.
     p Cu cât construieşti mai repede un buget lunar bine definit, cu atât mai repede vei putea reduce cheltuielile inutile şi vei reuşi să nu cheltui mai multe resurse financiare decât ai şi chiar să faci economii.
-    h1 insert textline here
+    +exercise({name:'l1ex11', ignoreScore: true})
+      +textline({name:'l1ex11-1', rows: '10', type: 'multiline', placeholder: '.....'})
     h3.bluetitle Exerciţiu de lucru pentru acasă
     p Analizează veniturile şi cheltuielile lunare ale familiei tale!
     +bluetitle({
